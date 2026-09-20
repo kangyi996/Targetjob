@@ -11,14 +11,12 @@ import re
 PERSONA_LABELS = {
     "student": "应届生",
     "intern": "实习生",
-    "career_changer": "转行者",
     "experienced": "有工作经验的求职者",
 }
 
 PERSONA_FOCUS = {
     "student": "重点关注课程项目、校园经历、实习经历和成长潜力。",
     "intern": "重点关注基础技能、课程项目、学习能力和实习目标。",
-    "career_changer": "重点关注可迁移能力、技能缺口和转行逻辑。",
     "experienced": "重点关注工作成果、业务影响、职责深度和专业能力。",
 }
 
@@ -157,4 +155,3 @@ def analyze(candidate_type: str, resume_text: str, job_description: str) -> Anal
         resume_advice=resume_advice,
         interview_questions=interview_questions,
     )
-
