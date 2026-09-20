@@ -22,3 +22,17 @@
 
 - [项目搭建记录](PROJECT_BUILD_LOG.md)
 - [MVP 需求说明](docs/MVP_SPEC.md)
+- [第一版技术架构](docs/ARCHITECTURE.md)
+
+## 本地运行
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+然后在浏览器打开 Streamlit 提供的本地地址即可。
+
+当前版本使用本地规则分析，不需要 API Key；后续接入大模型时会继续保留这套本地演示模式作为备用方案。
