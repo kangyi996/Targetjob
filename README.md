@@ -11,9 +11,10 @@
 ## GitHub
 
 - GitHub 账号：`kangyi996`
-- 仓库状态：待创建
-- 仓库名称：待确认
-- 可见性：待确认
+- 仓库地址：[github.com/kangyi996/Targetjob](https://github.com/kangyi996/Targetjob)
+- 仓库名称：`Targetjob`
+- 可见性：公开
+- 默认分支：`main`
 
 ## 文档
 
