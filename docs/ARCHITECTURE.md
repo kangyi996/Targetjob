@@ -35,6 +35,7 @@ Targetjob/
 │   ├── __init__.py
 │   ├── analyzer.py           # 第一版本地分析器
 │   ├── models.py             # 求职者画像和经历数据结构
+│   ├── profile_builder.py    # 表单数据到画像对象的转换
 │   └── profile_validator.py  # 画像完整性校验
 ├── tests/
 │   └── test_analyzer.py      # 分析器单元测试
@@ -50,13 +51,13 @@ Targetjob/
 ```text
 用户选择身份
       ↓
-输入简历 + 职位描述
+填写求职画像表单
       ↓
 画像字段校验
       ↓
-分析器提取关键词并做匹配
+画像通过后进入职位分析
       ↓
-生成结构化分析结果
+分析器提取关键词并做匹配
       ↓
 Streamlit 展示报告
 ```

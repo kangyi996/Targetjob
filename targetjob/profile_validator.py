@@ -59,6 +59,12 @@ def validate_profile(profile: CandidateProfile) -> ProfileValidation:
         if not (profile.experiences or profile.projects or profile.competitions):
             missing.append("应届生或实习生至少需要一项经历、项目或竞赛")
 
+    for index, experience in enumerate(profile.experiences, start=1):
+        if not _has_text(experience.organization):
+            missing.append(f"第 {index} 段经历需要填写公司或组织")
+        if not _has_text(experience.description):
+            missing.append(f"第 {index} 段经历需要填写具体内容")
+
     for index, project in enumerate(profile.projects, start=1):
         if not _has_text(project.name):
             missing.append(f"第 {index} 个项目需要填写项目名称")
@@ -82,4 +88,3 @@ def validate_profile(profile: CandidateProfile) -> ProfileValidation:
         missing_fields=missing,
         recommendations=recommendations,
     )
-
